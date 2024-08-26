@@ -1,0 +1,67 @@
+# Папки и файлы Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Папки и файлы Visual Studio Code
+.vscode/
+
+# Папки сборки
+bin/
+obj/
+out/
+
+# Лог-файлы
+*.log
+
+# Пользовательские настройки, секреты и файлы конфигурации
+secrets.json
+appsettings*.json
+!appsettings.json
+*.env
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Служебные файлы проекта
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Компоненты и библиотеки Node.js
+node_modules/
+npm-debug.log
+yarn.lock
+
+# Исключаем все Dockerfiles, кроме конкретных
+# ! используется для исключения из правила
+# Игнорировать все Dockerfiles
+**/[Dd]ockerfile
+
+# Но не игнорировать конкретные файлы
+!**/MessageClientApp.Dockerfile
+!**/RESTApiService.Dockerfile
+
+# Игнорировать все файлы docker-compose.yml
+**/docker-compose.yml
+
+# Но не игнорировать основной файл docker-compose.yml
+!docker-compose.yml
+
+# Игнорировать docker-compose.override.yml и .dockerignore
+docker-compose.override.yml
+.dockerignore
+
+# Папки и файлы кэширования
+*.swp
+*~
+
+# Файлы или папки, создаваемые при разработке с использованием различного ПО
+.DS_Store
+Thumbs.db

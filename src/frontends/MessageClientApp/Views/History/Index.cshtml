@@ -1,0 +1,32 @@
+@using shared.Models
+@model IEnumerable<Message>
+
+@{
+    ViewData["Title"] = "Messages for the last 10 minutes";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model)
+            {
+                <tr>
+                    <td>@message.Id</td>
+                    <td>@message.Timestamp.ToString("dd-MM-yyyy HH:mm")</td>
+                    <td>@message.Content</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<form id="refreshForm" method="get" asp-controller="History" asp-action="Index">
+    <button type="submit" class="btn btn-primary">Get Messages</button>
+</form>

@@ -1,0 +1,16 @@
+@using shared.Models
+@model Message
+
+@{
+    ViewData["Title"] = "Send Message";
+}
+
+<h2>Send Message</h2>
+
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label for="Content">Message</label>
+        <textarea class="form-control" id="Content" name="Content" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>

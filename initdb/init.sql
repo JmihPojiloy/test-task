@@ -1,0 +1,9 @@
+CREATE DATABASE testdb;
+
+\connect testdb;
+
+CREATE TABLE IF NOT EXISTS messages (
+    id SERIAL PRIMARY KEY,
+    content VARCHAR(128) NOT NULL,
+    timestamp TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
